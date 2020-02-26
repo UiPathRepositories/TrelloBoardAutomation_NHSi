@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>476,566</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>496,482</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -90,85 +90,78 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="436,486" sap2010:WorkflowViewState.IdRef="Sequence_19">
+  <Sequence sap:VirtualizedContainerService.HintSize="476,422" sap2010:WorkflowViewState.IdRef="Sequence_19">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uaa:AzureScope ClientId="[ClientId]" ClientSecret="[New System.Net.NetworkCredential(&quot;&quot;, ClientSecret).SecurePassword]" DisplayName="Azure Scope" EnvironmentType="Global" sap:VirtualizedContainerService.HintSize="414,362" sap2010:WorkflowViewState.IdRef="AzureScope_1" SubscriptionId="[SubscriptionId]" TenantId="[TenantId]">
+    <uaa:AzureScope ClientId="[ClientId]" ClientSecret="[New System.Net.NetworkCredential(&quot;&quot;, ClientSecret).SecurePassword]" DisplayName="Azure Scope" EnvironmentType="Global" sap:VirtualizedContainerService.HintSize="434,330" sap2010:WorkflowViewState.IdRef="AzureScope_1" SubscriptionId="[SubscriptionId]" TenantId="[TenantId]">
       <uaa:AzureScope.Body>
         <ActivityAction x:TypeArguments="uac:AzureCmd">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="uac:AzureCmd" Name="AzureScopePropertyTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="306,276" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="272,244" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="284,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Verifying account data..." />
-            <uaa:AzureForEachBlobContainer CurrentIndex="{x:Null}" DisplayName="For Each Blob Container" sap:VirtualizedContainerService.HintSize="284,51" sap2010:WorkflowViewState.IdRef="ForEachBlobContainer_3" NameStartsWith="company" StorageAccount="[Storage]" StorageAccountKey="[StorageKey]">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Verifying account data..." />
+            <uaa:AzureForEachBlobContainer CurrentIndex="{x:Null}" DisplayName="For Each Blob Container" sap:VirtualizedContainerService.HintSize="718,922" sap2010:WorkflowViewState.IdRef="ForEachBlobContainer_3" NameStartsWith="company" StorageAccount="[Storage]" StorageAccountKey="[StorageKey]">
               <uaa:AzureForEachBlobContainer.Body>
                 <ActivityAction x:TypeArguments="uam:BlobContainer">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="uam:BlobContainer" Name="Container" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="534,777" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="682,788" sap2010:WorkflowViewState.IdRef="Sequence_17">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uaa:AzureForEachBlob CurrentIndex="{x:Null}" NameStartsWith="{x:Null}" BlobContainer="[Container]" DisplayName="For Each Blob in Container" sap:VirtualizedContainerService.HintSize="512,653" sap2010:WorkflowViewState.IdRef="ForEachBlob_1">
+                    <uaa:AzureForEachBlob CurrentIndex="{x:Null}" NameStartsWith="{x:Null}" BlobContainer="[Container]" DisplayName="For Each Blob in Container" sap:VirtualizedContainerService.HintSize="640,696" sap2010:WorkflowViewState.IdRef="ForEachBlob_1">
                       <uaa:AzureForEachBlob.Body>
                         <ActivityAction x:TypeArguments="uam:Blob">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="uam:Blob" Name="Blob" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,519" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="x:Int32" Name="statusCode" />
-                            </Sequence.Variables>
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                            <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[Blob.Uri]" sap:VirtualizedContainerService.HintSize="464,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" StatusCode="[statusCode]" TimeoutMS="6000">
-                              <ui:HttpClient.Attachments>
-                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                              </ui:HttpClient.Attachments>
-                              <ui:HttpClient.Cookies>
-                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                              </ui:HttpClient.Cookies>
-                              <ui:HttpClient.Headers>
-                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                              </ui:HttpClient.Headers>
-                              <ui:HttpClient.Parameters>
-                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                              </ui:HttpClient.Parameters>
-                              <ui:HttpClient.UrlSegments>
-                                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                              </ui:HttpClient.UrlSegments>
-                            </ui:HttpClient>
-                            <If Condition="[statusCode.Equals(404)]" sap:VirtualizedContainerService.HintSize="464,333" sap2010:WorkflowViewState.IdRef="If_1">
-                              <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="232,185" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="604,562" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="568,484" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,392" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Name="statusCode" />
+                                  </Sequence.Variables>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="210,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Verified that blob &quot; + Blob.Uri+ &quot; cannot be accessed publicly&quot;]" />
+                                  <If Condition="[statusCode.Equals(404)]" sap:VirtualizedContainerService.HintSize="484,300" sap2010:WorkflowViewState.IdRef="If_1">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="272,153" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Verified that blob &quot; + Blob.Uri+ &quot; cannot be accessed publicly&quot;]" />
+                                      </Sequence>
+                                    </If.Then>
+                                  </If>
                                 </Sequence>
-                              </If.Then>
-                            </If>
-                          </Sequence>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
                         </ActivityAction>
                       </uaa:AzureForEachBlob.Body>
                       <uaa:AzureForEachBlob.NumberOfBlobsPerSegment>
